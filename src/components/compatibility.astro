@@ -1,0 +1,89 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "MetaAI",
+    icon: "frameworks/meta",
+    url: "",
+  },
+  {
+    title: "OpenAI",
+    icon: "frameworks/openai",
+    url: "",
+  },
+  {
+    title: "Mistral",
+    icon: "frameworks/mistral",
+    url: "",
+  },
+  {
+    title: "Mosaic",
+    icon: "frameworks/mosaic",
+    url: "",
+  },
+  {
+    title: "AWS",
+    icon: "fa-brands:aws",
+    url: "",
+  },
+  {
+    title: "Google Cloud",
+    icon: "frameworks/googlecloud",
+    url: "",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "IT Helpdesk",
+    icon: "mdi:account-help-outline",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Support",
+    icon: "mdi:support",
+    url: "https://vercel.com/",
+  },
+  {
+    title: "Scheduling",
+    icon: "mdi:schedule",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "Lead Routing",
+    icon: "mdi:arrow-decision-outline",
+    url: "https://render.com/",
+  },
+  {
+    title: "Recommendations",
+    icon: "mdi:magic",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "Help Bots",
+    icon: "mdi:handshake-outline",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+---
+
+<ContentSection title="Solutions" id="compatibility">
+  <Fragment slot="lead">
+    Chat.dev <span class="text-primary">plays nice</span>. Bring your own{" "}
+    <span class="text-primary">data</span>
+    and fine-tune your favorite <span class="text-primary">foundational model</span> to work perfectly for <span class="text-primary">your use case</span>.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Foundational Models"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Use Cases"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

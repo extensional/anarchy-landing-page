@@ -1,0 +1,127 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import type { WhoWeAreItem, CompatibilityItem } from "~/types";
+import { Image } from 'astro:assets';
+import ycImage from '../assets/logos/yc.webp';
+import venrexImage from '../assets/logos/venrex.webp';
+import aminoImage from '../assets/logos/amino.webp';
+import fellowfundImage from '../assets/logos/fellowfund.webp';
+import ethImage from '../assets/logos/eth.webp';
+import googleImage from '../assets/logos/google.webp';
+import appleImage from '../assets/logos/apple.webp';
+import venmoImage from '../assets/logos/venmo.webp';
+
+const frameworks: Array<WhoWeAreItem> = [
+  {
+    title: "YCombinator",
+    icon: "assets/logos/yc.webp",
+  },
+  {
+    title: "Venrex",
+    icon: "assets/logos/venrex.webp",
+  },
+  {
+    title: "Amino Capital",
+    icon: "assets/logos/amino.webp",
+  },
+  {
+    title: "Fellow Funds",
+    icon: "assets/logos/fellowfund.webp",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "IT Helpdesk",
+    icon: "mdi:account-help-outline",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Support",
+    icon: "mdi:support",
+    url: "https://vercel.com/",
+  },
+  {
+    title: "Scheduling",
+    icon: "mdi:schedule",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "Lead Routing",
+    icon: "mdi:arrow-decision-outline",
+    url: "https://render.com/",
+  },
+  {
+    title: "Recommendations",
+    icon: "mdi:magic",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "Help Bots",
+    icon: "mdi:handshake-outline",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+---
+
+<ContentSection title="Who We Are" id="who-we-are">
+  <Fragment slot="lead">
+    We are an expert team
+  </Fragment>
+  <div class="w-full max-w-6xl space-y-2">
+    <div class="relative border border-default bg-offset px-6 pb-4 pt-8">
+      <h3
+        class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs"
+      >
+        {'Backed By'}
+      </h3>
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div class="flex flex-col items-center gap-2">
+          <Image src={ycImage} alt="Backed By YCombinator" />
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Image src={venrexImage} alt="Backed By Venrex" />
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Image src={aminoImage} alt="Backed By Amino Capital" />
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Image src={fellowfundImage} alt="Backed By Fellows Fund" />
+        </div>
+      </div>
+    </div>
+    <!-- <p class="text-right text-sm">
+      <a class="text-primary" href={url}> ...and more &rarr;</a>
+    </p> -->
+  </div>
+  <div class="w-full max-w-6xl space-y-2">
+    <div class="relative border border-default bg-offset px-6 pb-4 pt-8">
+      <h3
+        class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs"
+      >
+        {'Expert Leadership Team'}
+      </h3>
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div class="flex flex-col items-center gap-2">
+          <Image src={ethImage} alt="Team from ETH Zurich" />
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Image src={googleImage} alt="Team from Google" />
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Image src={appleImage} alt="Team from Apple" />
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Image src={venmoImage} alt="Team from Venmo" />
+        </div>
+      </div>
+    </div>
+    <!-- <p class="text-right text-sm">
+      <a class="text-primary" href={url}> ...and more &rarr;</a>
+    </p> -->
+  </div>
+  <!-- <WhoWeAreList
+    items={platforms}
+    title="Expert Leadership Team"
+  /> -->
+</ContentSection>

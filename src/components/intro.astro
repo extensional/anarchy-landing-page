@@ -1,0 +1,37 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="Train Chatbots In-House" id="intro">
+  <Icon slot="eyebrow" name="logomark" class="size-32" />
+  <Fragment slot="lead">
+    Chat.dev is a low-code platform for building
+    <span class="text-primary">smart</span> chatbots with
+    <span class="text-primary">state-of-the-art</span>
+    foundational <span class="text-primary">AI models</span>.
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
+    <a
+      href="https://anarchy.ai/docs/"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:document" class="size-8" />
+      <span>Read the docs</span>
+    </a>
+    <a
+      href="https://chat.dev/dashboard/models"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:tune" class="size-8" />
+      <span>Start fine-tuning</span>
+    </a>
+    <a
+      href="https://hqmelywdmux.typeform.com/to/Igbg4n9V"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:contact" class="size-8" />
+      <span>Contact Sales</span>
+    </a>
+  </div>
+</ContentSection>

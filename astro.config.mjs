@@ -5,8 +5,8 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://chat.dev/",
-  base: '/home/',
-  outDir: "./dist/home",
+  // base: '/home/',
+  // outDir: "./dist/home",
   integrations: [tailwind(), icon()],
 });
 

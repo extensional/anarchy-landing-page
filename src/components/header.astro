@@ -2,6 +2,8 @@
 import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import chatDevLogoImage from "~/assets/chat-dev-logo-only.png";
+import { Image } from "astro:assets";
 
 const navItems: Array<NavItem> = [
   { title: "Features", url: "#features" },
@@ -10,7 +12,10 @@ const navItems: Array<NavItem> = [
   // { title: "Showcase", url: "#showcase" },
   { title: "Pricing", url: "#pricing" },
   // { title: "Safety and Compliances", url: "#compliance" },
-  { title: "Contact Sales", url: "https://hqmelywdmux.typeform.com/to/Igbg4n9V" },
+  {
+    title: "Contact Sales",
+    url: "https://hqmelywdmux.typeform.com/to/Igbg4n9V",
+  },
 ];
 ---
 
@@ -18,10 +23,12 @@ const navItems: Array<NavItem> = [
   id="page-header"
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="https://chat.dev/dashboard/models">
-    <h1 class="sr-only">Chat.dev</h1>
-    <Icon name="logomark" class="size-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+  <a
+    class="flex items-center gap-3"
+    href="https://chat.dev/dashboard/models"
+  >
+    <Image src={chatDevLogoImage} alt="Chat.dev logo" width={40} />
+    <h1 class="hover:text-blue-600">Chat.dev</h1>
   </a>
   <div>
     <div class="flex items-center gap-6">
